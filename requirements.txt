@@ -1,0 +1,18 @@
+# AI-Driven Calgary Energy Decision Intelligence Platform
+# Run:  streamlit run Home.py
+streamlit>=1.40
+pandas
+numpy
+scipy
+scikit-learn
+statsmodels
+plotly
+joblib
+openpyxl                # Excel upload
+xgboost                 # optional: pages 9-10
+bayesian-optimization   # page 15 (falls back to grid search if missing)
+reportlab               # PDF report (page 17)
+pypdf                   # PDF documents (page 18)
+python-docx             # DOCX documents (page 18)
+ollama                  # local LLM client; also install the Ollama app and run: ollama pull llama3.2
+# tensorflow            # optional: LSTM on page 11
