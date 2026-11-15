@@ -604,35 +604,10 @@ Deploy & Streamlit/
   is chronological.
 - **Uncertainty, not just point values.** P10/P50/P90 bands, interval coverage, Monte Carlo cost ranges, NPV
   sensitivity.
-- **Industry standards.** ASHRAE Guideline 14 metrics, IPMVP-style avoided energy, upper-tail VaR for a buyer.
 - **Grounded AI.** The LLM receives computed results as JSON and is told to use only those numbers; every
   AI feature has a rule-based fallback.
 - **Data-quality first.** Page 1 and the sidebar flag irregular timestamps, duplicates, outliers and implausible
   values before any model is trusted.
 
----
 
-## 13. Limitations
 
-- **Results depend on the data.** The figures in section 7 come from a development dataset that is not included
-  in the repository and that the platform itself flags (58% time coverage, duplicate timestamps, implausible
-  temperatures, a nearly flat daily load profile). Re-run the pages on your own data before drawing conclusions.
-- **Hourly ML skill is limited on this dataset.** Hold-out R² is 0.32 for the tuned Random Forest, so the daily
-  weather-normalized baseline and the P10-P90 band are the more reliable outputs.
-- **Investment answers are default-driven.** The "build nothing" result for PV + battery holds at the default
-  costs and prices; change the inputs on page 15 to test other cases.
-- **AI features need a local LLM for full text output.** Without Ollama the decision pages use rule-based
-  fallbacks, which are transparent but less fluent.
-- **Optional components.** LSTM forecasting needs TensorFlow / Keras; Bayesian optimization needs the
-  `bayesian-optimization` package.
-- **Synthetic demo data** is for exploring the app only and is not a basis for decisions.
-
----
-
-## 14. Roadmap
-
-- [ ] Live data connectors (smart-meter and AESO market feeds) in addition to file upload
-- [ ] Multi-site comparison and portfolio views
-- [ ] Containerised deployment (Docker) and hosted demo
-- [ ] Automated test suite in CI alongside the headless `AppTest` runs
-- [ ] Additional LLM backends beyond Ollama
