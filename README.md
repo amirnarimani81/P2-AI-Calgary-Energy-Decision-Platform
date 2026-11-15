@@ -96,8 +96,7 @@ data into decisions: 19 pages, 6 categories, local AI.
 10. [Project structure](#10-project-structure)
 11. [Technology stack](#11-technology-stack)
 12. [Design choices that make results trustworthy](#12-design-choices-that-make-results-trustworthy)
-13. [Limitations](#13-limitations)
-14. [Roadmap](#14-roadmap)
+
 
 ---
 
